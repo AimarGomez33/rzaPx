@@ -56,12 +56,110 @@ Para resolverlo, se creó una **métrica ponderada** y, con tres pares de valore
 ## **Metodología**
 
 ### **1. Definición de parámetros**
-- Peso del servicio: `w_s = 0.8`  
-- Peso de la calidad: `w_c = 0.2`  
-- Propina mínima: `y_min = 5%`  
-- Propina fija: `y_fijo = 15%`  
-- Propina máxima: `y_max = 25%`
+- Peso del servicio:  
+  $$
+  w_s = 0.8
+  $$
+
+- Peso de la calidad:  
+  $$
+  w_c = 0.2
+  $$
+
+- Propina mínima:  
+  $$
+  y_{\min} = 5\%
+  $$
+
+- Propina fija:  
+  $$
+  y_{\fijo} = 15\%
+  $$
+
+- Propina máxima:  
+  $$
+  y_{\max} = 25\%
+  $$
+
+---
 
 ### **2. Cálculo de la métrica ponderada**
-```math
-M = (w_s * S) + (w_c * Q)
+$$
+M = (w_s \cdot S) + (w_c \cdot Q)
+$$
+
+---
+
+### **3. Definición de umbrales**
+$$
+M_{\min} = 1, \quad
+M_1 = 5, \quad
+M_2 = 8, \quad
+M_{\max} = 10
+$$
+
+---
+
+### **4. Cálculo de pendientes**
+- **Tramo bajo:**  
+  $$
+  m_1 = \frac{0.15 - 0.05}{5 - 1} = 0.025
+  $$
+
+- **Tramo alto:**  
+  $$
+  m_3 = \frac{0.25 - 0.15}{10 - 8} = 0.05
+  $$
+
+---
+
+### **5. Implementación en Python**
+Se creó un script con **NumPy** y **Matplotlib** para:  
+- Calcular la propina según la métrica.  
+- Graficar el comportamiento de la propina frente al servicio.  
+- Marcar los casos analizados.
+
+---
+
+## **Resultados**
+
+### **Casos prácticos**
+| Caso | S   | Q   | Métrica (M) | Propina (y)   |
+|-------|------|------|-------------|---------------|
+| **A** | 2.9  | 8.0  | 3.92        | 0.123 (12.3%) |
+| **B** | 5.0  | 8.0  | 5.60        | 0.150 (15.0%) |
+| **C** | 8.5  | 6.0  | 8.00        | 0.150 (15.0%) |
+
+---
+
+### **Gráfica de resultados**
+- Curvas para **Q=8** y **Q=6**.  
+- Líneas verticales que marcan los cambios de tramo.  
+- Puntos que muestran dónde se encuentran los tres casos evaluados.  
+
+*(Aquí se pueden insertar las gráficas generadas con Matplotlib).*
+
+---
+
+## **Discusión**
+El modelo muestra que:
+- **En el tramo bajo**, la propina sube poco a poco conforme mejora el servicio.  
+- **En el tramo medio**, la propina se mantiene en un estándar del 15%.  
+- **En el tramo alto**, la propina vuelve a subir y puede alcanzar hasta el 25%.
+
+Esto confirma que el peso del servicio es mayor, pero que la calidad también influye, logrando un cálculo más equilibrado.
+
+---
+
+## **Conclusiones**
+- Se logró construir un modelo práctico y fácil de usar para calcular propinas.  
+- El uso de ponderaciones y umbrales hace que el cálculo sea más justo y entendible.  
+- Las gráficas ayudan mucho a visualizar y explicar el comportamiento del modelo.  
+
+Para mejorar, se podría usar información real de clientes y ajustar las pendientes y los umbrales según los datos.
+
+---
+
+## **Bibliografía**
+- Swokowski, E. W. (2011). *Álgebra y Trigonometría con Geometría Analítica*. Cengage Learning.  
+- Documentación de [NumPy](https://numpy.org/) y [Matplotlib](https://matplotlib.org/).
