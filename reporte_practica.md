@@ -23,11 +23,9 @@ En esta práctica se ingresaron matrices, se calcularon transpuestas, determinan
 
 ### 1.1) Ingreso de matrices
 
-Se definieron las matrices:
+Se definieron las siguientes matrices:
 
-# Matrices
-
-## M1
+### M1
 \[
 M1 =
 \begin{bmatrix}
@@ -37,7 +35,7 @@ M1 =
 \end{bmatrix}
 \]
 
-## M2
+### M2
 \[
 M2 =
 \begin{bmatrix}
@@ -47,7 +45,7 @@ M2 =
 \end{bmatrix}
 \]
 
-## M3
+### M3
 \[
 M3 =
 \begin{bmatrix}
@@ -57,8 +55,6 @@ M3 =
 \end{bmatrix}
 \]
 
-
----
 
 ### 1.2) Operaciones con matrices
 
