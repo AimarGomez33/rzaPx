@@ -25,19 +25,38 @@ En esta práctica se ingresaron matrices, se calcularon transpuestas, determinan
 
 Se definieron las matrices:
 
-```matlab
-M1 = [ 1  -3   5;
-      -5   4   7;
-       8   3  -2];
+# Matrices
 
-M2 = [ 9  -5   4;
-      -1  -6  -7;
-       2   3  -3];
+## M1
+\[
+M1 =
+\begin{bmatrix}
+1 & -3 & 5 \\
+-5 & 4 & 7 \\
+8 & 3 & -2
+\end{bmatrix}
+\]
 
-M3 = [-5  -4   6;
-      -2   8   1;
-       4   5  -7];
-```
+## M2
+\[
+M2 =
+\begin{bmatrix}
+9 & -5 & 4 \\
+-1 & -6 & -7 \\
+2 & 3 & -3
+\end{bmatrix}
+\]
+
+## M3
+\[
+M3 =
+\begin{bmatrix}
+-5 & -4 & 6 \\
+-2 & 8 & 1 \\
+4 & 5 & -7
+\end{bmatrix}
+\]
+
 
 ---
 
